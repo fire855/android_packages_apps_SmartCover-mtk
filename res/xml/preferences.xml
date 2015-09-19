@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <CheckBoxPreference android:title="Enable Smart Cover"
+                      android:defaultValue="false"
+                      android:key="enableCover"
+                      android:summary="This option will enable smart cover support."></CheckBoxPreference>
+  <CheckBoxPreference android:title="Screen On"
+                      android:defaultValue="false"
+                      android:enabled="false"
+                      android:summary="This option will wake up your screen if you open your cover."
+                      android:key="screenOn"></CheckBoxPreference>
+  <CheckBoxPreference android:title="Screen Off"
+                      android:defaultValue="false"
+                      android:enabled="false"
+                      android:summary="This option will put your screen to sleep if you close your cover."
+                      android:key="screenOff"></CheckBoxPreference>
+</PreferenceScreen>
