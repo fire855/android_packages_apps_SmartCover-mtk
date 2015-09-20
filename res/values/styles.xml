@@ -1,11 +1,8 @@
 <resources>
 
-    <style name="AppTheme" parent="@android:style/Theme.Material.Light">
-        <item name="android:actionBarStyle">@style/ActionBar</item>
-    </style>
-
-    <style name="ActionBar" parent="@android:style/Widget.Material.Light.ActionBar">
-        <item name="android:background">#263238</item>
+    <style name="AppTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+        <item name="android:colorPrimaryDark">#ff21272b</item>
+        <item name="android:colorPrimary">#263238</item>
         <item name="android:titleTextStyle">@style/Theme.AppTheme.ActionBar.TitleTextStyle</item>
     </style>
 

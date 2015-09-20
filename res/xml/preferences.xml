@@ -7,7 +7,7 @@
   <CheckBoxPreference android:title="Screen On"
                       android:defaultValue="false"
                       android:enabled="false"
-                      android:summary="This option will wake up your screen if you open your cover."
+                      android:summary="This option will wake up your screen if you open your cover. If enabled it will cause higher battery drain."
                       android:key="screenOn"></CheckBoxPreference>
   <CheckBoxPreference android:title="Screen Off"
                       android:defaultValue="false"
