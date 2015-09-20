@@ -50,6 +50,8 @@ public class SettingsActivity extends PreferenceActivity {
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
                 SensorService.mScreenOn = (boolean) newValue;
+                stopService(new Intent(instance, SensorService.class));
+                startService(new Intent(instance, SensorService.class));
                 return true;
             }
         });

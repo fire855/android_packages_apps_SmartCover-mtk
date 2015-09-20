@@ -33,10 +33,12 @@ public class SensorService extends Service {
 
     @Override
     public void onCreate() {
-        mPowerManager = (PowerManager) this.getSystemService(Context.POWER_SERVICE);
-
+        mPowerManager = (PowerManager) getSystemService(Context.POWER_SERVICE);
         mWakeLock = mPowerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "CoverWakelock");
-        mWakeLock.acquire();
+
+        if (mScreenOn) {
+            mWakeLock.acquire();
+        }
 
         if (!mSensorRegistered) {
             mSensorManager = (SensorManager) this.getSystemService(Context.SENSOR_SERVICE);
@@ -55,7 +57,9 @@ public class SensorService extends Service {
             mSensorRegistered = false;
         }
 
-        mWakeLock.release();
+	if (mWakeLock.isHeld()) {
+            mWakeLock.release();
+	}
     }
 
 
